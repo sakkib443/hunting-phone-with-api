@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Hunter</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.4.6/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="border-b-2 border-black-5">
+      <nav
+        class="m-auto mb-4 w-10/12 items-center mt-4 flex flex-col lg:flex-row justify-between"
+      >
+        <div class="logo"><img src="img/Logo.png" alt="" /></div>
+        <button class="btn mb-2 lg:mb-0 btn-active">SORT BY VEW</button>
+        <button class="btn btn-secondary">VEW BLOG</button>
+      </nav>
+    </header>
+
+    <body>
+      <!-- card section start -->
+      <section class="phone-card relative w-10/12 m-auto my-12">
+        <!-- start sharch section -->
+        <div class="search-section mb-4">
+          <input
+            id="sharch-input"
+            type="text"
+            placeholder="Type here"
+            class="input input-bordered input-secondary w-full max-w-xs"
+          />
+          <button onclick="handleSharch()" class="btn btn-active btn-secondary">
+            SEARCH
+          </button>
+        </div>
+        <!-- end sharch section -->
+
+        <!-- start loading section -->
+        <div class="loading-section text-center hidden">
+          <span class="loading loading-spinner  text-error"></span>
+        </div>
+        <!-- End loading section -->
+
+        <div class="">
+          <div
+            class="grid lg:grid-cols-4  gap-y-12 gap-x-1 md:grid-cols-2 grid-cols-1 m-auto"
+            id="phone-container"
+          ></div>
+        </div>
+
+        <div class="show-more flex justify-center my-5">
+          <button id="show-more-btn" class="btn btn-info hidden">
+            SHOW MORE >
+          </button>
+        </div>
+      </section>
+      <!-- card section end -->
+    </body>
+
+    <script src="js/phone.js"></script>
+  </body>
+</html>
